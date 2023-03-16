@@ -5,6 +5,8 @@ import { SoftwareComponent } from './software/software.component';
 import { ProductComponent } from './product/product.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CardViewComponent } from './card-view/card-view.component';
+import { LoginComponent } from './login/login.component';
+import { CourseMaterialComponent } from './course-material/course-material.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/home', pathMatch:'full'},
@@ -12,8 +14,10 @@ const routes: Routes = [
 {path:'software', component:SoftwareComponent},
 {path:'product', component:ProductComponent},
 {path: 'card-view/:url', component:CardViewComponent},
-
+{path: 'login', component:LoginComponent},
+{path: 'coursematerial', component:CourseMaterialComponent},
 {path: '**', component:PagenotfoundComponent}
+
 ];
 
 @NgModule({
