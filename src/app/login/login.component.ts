@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -9,17 +10,21 @@ export class LoginComponent {
   username : string ="";
   password : string ="";
   show: boolean= false;
+
+  constructor(private service:AuthenticationService){}
+
 submit(){
 //console.log("user name is " + this.username)
   if(this.username=="Negi" && this.password=="123"){
+    this.service.loggedIn();
     this.clear();
-  }else{
-    this.show = false;
-    alert("login Fail")
   }
-  
- 
+
 }
+LogOut(){
+  this.service.loggedOut();
+}
+
 clear(){
   this.username ="";
   this.password = "";
