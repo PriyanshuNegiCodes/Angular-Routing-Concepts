@@ -21,10 +21,27 @@ export class EnquiryComponent {
     shipping: ['free', Validators.required]
   });
 
-  canExit(){
-    if(this.addressForm.get('company') || this.addressForm.get('firstName') ||this.addressForm.get('lastName')){
-      return confirm("Do you really want to leave this form")
-    }else{
+  // canExit(){
+  //   if(this.addressForm.get('company') || this.addressForm.get('firstName') ||this.addressForm.get('lastName')){
+  //     return confirm("Do you really want to leave this form")
+  //   }else{
+  //     return true;
+  //   }
+  // }
+  canExit() {
+    if (this.addressForm.get('company')?.dirty) {
+      if (
+        this.addressForm.get('company') ||
+        this.addressForm.get('firstName') ||
+        this.addressForm.get('lastName') ||
+        this.addressForm.get('address')
+      ) {
+        return confirm('wanna leave! with out saving it?');
+      } else {
+        return true;
+      }
+    }
+    else{
       return true;
     }
   }

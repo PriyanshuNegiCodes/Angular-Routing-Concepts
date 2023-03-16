@@ -21,7 +21,6 @@ const routes: Routes = [
 {path: 'coursematerial', component:CourseMaterialComponent, canActivate:[CanActivateGuard]},
 {path: 'enquiry', component:EnquiryComponent, canDeactivate:[CanDeactivatedTeam]},
 {path: '**', component:PagenotfoundComponent}
-
 ];
 
 @NgModule({
