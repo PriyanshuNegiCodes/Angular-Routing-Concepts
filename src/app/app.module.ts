@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -22,6 +22,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { LoginComponent } from './login/login.component';
 import { CourseMaterialComponent } from './course-material/course-material.component';
+import { EnquiryComponent } from './enquiry/enquiry.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import { CourseMaterialComponent } from './course-material/course-material.compo
     NavigationComponent,
     NavigationBarComponent,
     LoginComponent,
-    CourseMaterialComponent
+    CourseMaterialComponent,
+    EnquiryComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,10 @@ import { CourseMaterialComponent } from './course-material/course-material.compo
     MatInputModule,
     LayoutModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatSelectModule,
+    MatRadioModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
